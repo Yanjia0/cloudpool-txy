@@ -1,0 +1,22 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "my first cloud base which will be related to cloudpool later",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Yanjia0/cloudpool-txy.git"
+  },
+  "author": "1234567",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanjia0/cloudpool-txy/issues"
+  },
+  "homepage": "https://github.com/Yanjia0/cloudpool-txy#readme",
+  "dependencies": {
+    "vant-weapp": "^1.0.0-beta.0"
+  }
+}
