@@ -1,3 +1,1 @@
 <van-button round type="info" block bind:click="addData">新增数据</van-button>
-<van-button square type="primary">方形按钮</van-button>
-<van-button round type="info">圆形按钮</van-button>
