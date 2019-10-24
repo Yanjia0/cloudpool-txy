@@ -2,7 +2,7 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init()
-const db = wx.cloud.database()
+const db = cloud.database()
 const caramelCollection = db.collection('caramel')
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -14,5 +14,4 @@ exports.main = async (event, context) => {
       color: "red",
     }
   })
-}
 }
