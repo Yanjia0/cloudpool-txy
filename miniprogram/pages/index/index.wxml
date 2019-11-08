@@ -1,13 +1,16 @@
+<block wx:for="{{products}}">
 <van-card
   num="2"
-  tag="标签"
-  price="10.00"
-  desc="描述信息"
-  title="商品标题"
-  thumb="{{ imageURL }}"
+  tag="{{item.tags}}"
+  price="{{item.price}}"
+  desc="{{item.color}}"
+  title="{{item.title}}"
+  thumb="{{item.image}}"
 >
+
   <view slot="footer">
     <van-button size="mini">按钮</van-button>
     <van-button size="mini">按钮</van-button>
   </view>
 </van-card>
+</block>

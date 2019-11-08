@@ -8,8 +8,8 @@ const caramelCollection = db.collection('caramel')
 exports.main = async (event, context) => {
   return await caramelCollection.add({
     data: {
-      title: "Can somebody go out for hot pot with me?",
-      tags: ["hot", "pot"],
+      title: "hello world",
+      tags: ["jiu", "cai"],
       price: 218.00,
       color: "red",
     }
