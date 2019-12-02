@@ -2,15 +2,19 @@
 <van-card
   num="2"
   tag="{{item.tags}}"
-  price="{{item.price}}"
+  price="{{item.view}}"
   desc="{{item.color}}"
   title="{{item.title}}"
   thumb="{{item.image}}"
+  bindtap="click"
+  data-id="{{item._id}}"
 >
 
   <view slot="footer">
     <van-button size="mini">按钮</van-button>
     <van-button size="mini">按钮</van-button>
   </view>
+
 </van-card>
+
 </block>

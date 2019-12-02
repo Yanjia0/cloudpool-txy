@@ -1,7 +1,7 @@
 //index.js
 const db=wx.cloud.database()
 const caramelCollection = db.collection('caramel')
-
+const _=db.command
 
 Page({
 
@@ -86,5 +86,15 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  click:function(event)
+  {
+    console.log(event.currentTarget.dataset.id)
+    caramelCollection.doc(event.currentTarget.dataset.id).update({
+      data:{
+        view:_.inc(1)
+      }
+    })
   }
 })
