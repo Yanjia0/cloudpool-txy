@@ -1,66 +1,54 @@
 // pages/complex/complex.js
+const db = wx.cloud.database()
+const caramelCollection = db.collection('caramel')
+const _=db.command
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+      count:'count'
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  simple:function(event){
+    caramelCollection.get().then(res => {
+      this.setData({
+        products: res.data
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  brown:function(event){
+    caramelCollection.where({
+      color:"brown"
+    }).get().then(res=>{
+      this.setData({
+        products:res.data
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  little:function(event){
+    caramelCollection.where({
+      price: _.lt(50)
+    }).get().then(res => {
+      this.setData({
+        products: res.data
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  orderBy:function(event){
+    caramelCollection.orderBy('price','asc').get().then(
+      res=>{
+        this.setData({
+          products:res.data
+        })
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  count:function(event){
+    caramelCollection.where({
+      _openid: "o_VJ85Z_d2frUSRIEPBaLlGWAVdw"
+    }).count().then(res=>{
+      console.log(res)
+      this.setData({
+        count:res.total
+      })
+    })
   }
+  
 })

@@ -2,7 +2,7 @@
 <van-card
   num="2"
   tag="{{item.tags}}"
-  price="{{item.view}}"
+  price="{{item.price}}"
   desc="{{item.color}}"
   title="{{item.title}}"
   thumb="{{item.image}}"
