@@ -1,7 +1,9 @@
 <van-cell-group>
-  <van-cell title="单元格" value="内容" />
-  <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+  <van-cell title="title" value="{{product.title}}" />
+  <van-cell title="price" value="{{product.price}}" />
+  <van-cell title="tags" value="{{product.tags}}" />
+  <van-cell title="color" value="{{product.color}}" label="特定字段查询" border="{{ false }}" />
 </van-cell-group>
-<van-button type="primary">主要按钮</van-button>
-<van-button type="warning">警告按钮</van-button>
-<van-button type="danger">危险按钮</van-button>
+<van-button type="primary" bindtap="addtag">添加tag</van-button>
+<van-button type="warning" bindtap="deltag">删除tag</van-button>
+<van-button type="danger" bindtap="update">更新数据</van-button>
