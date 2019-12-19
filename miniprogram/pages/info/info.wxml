@@ -7,3 +7,4 @@
 <van-button type="primary" bindtap="addtag">添加tag</van-button>
 <van-button type="warning" bindtap="deltag">删除tag</van-button>
 <van-button type="danger" bindtap="update">更新数据</van-button>
+<van-button type="primary" bindtap="batchUpdate">batch Update</van-button>

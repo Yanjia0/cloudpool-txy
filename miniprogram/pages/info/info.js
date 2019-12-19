@@ -53,6 +53,16 @@ update:function(event){
     }
   })
 },
+
+batchUpdate:function(event){
+  wx.cloud.callFunction({
+    name:'batchUpdate',
+    success:res=>{
+      console.log(res)
+    }
+  })
+},
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
